@@ -34,9 +34,7 @@ const Page = async ({ params }: PageProps) => {
         <div className="mx-auto w-full max-w-8xl lg:flex xl:px-2">
           {/* left side: pdf */}
           <div className="flex-1 xl:flex">
-            <div>
-              <PdfRenderer />
-            </div>
+            <PdfRenderer />
           </div>
           {/* right side: chat */}
           <div className="shrink-0 flex-[0.75] border-t border-gray-200 lg:w-96 lg:border-l lg:border-t-0">
