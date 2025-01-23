@@ -41,8 +41,7 @@ const UploadDropzone = () => {
           const progressInterval = startSimulatedProgress();
 
           // todo: handle file uploading
-          // const res = await startUpload(acceptedFile);
-          const res = [{ key: "debugging" }];
+          const res = await startUpload(acceptedFile);
 
           if (!res) {
             return toast({
@@ -138,9 +137,7 @@ const UploadButton = () => {
         <DialogTrigger onClick={() => setIsOpen(true)} asChild>
           <Button>Upload PDF</Button>
         </DialogTrigger>
-        <DialogContent>
-          <UploadDropzone />
-        </DialogContent>
+        <DialogContent>{/* <UploadDropzone /> */}</DialogContent>
       </Dialog>
     </>
   );
