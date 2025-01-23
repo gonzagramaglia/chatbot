@@ -17,19 +17,17 @@ const UploadDropzone = () => {
   const { startUpload } = useUploadThing("pdfUploader");
 
   const startSimulatedProgress = () => {
-    setUploadProgress(0);
-
-    const interval = setInterval(() => {
-      setUploadProgress((prevProgress) => {
-        if (prevProgress >= 95) {
-          clearInterval(interval);
-          return prevProgress;
-        }
-        return prevProgress + 5;
-      });
-    }, 500);
-
-    return interval;
+    // setUploadProgress(0);
+    // const interval = setInterval(() => {
+    //   setUploadProgress((prevProgress) => {
+    //     if (prevProgress >= 95) {
+    //       clearInterval(interval);
+    //       return prevProgress;
+    //     }
+    //     return prevProgress + 5;
+    //   });
+    // }, 500);
+    // return interval;
   };
 
   return (
@@ -64,7 +62,7 @@ const UploadDropzone = () => {
 
           console.log(key);
 
-          clearInterval(progressInterval);
+          // clearInterval(progressInterval);
           setUploadProgress(100);
         }}
       >
@@ -127,12 +125,12 @@ const UploadButton = () => {
   return (
     <>
       <Dialog
-      // open={isOpen}
-      // onOpenChange={(v) => {
-      //   if (!v) {
-      //     setIsOpen(v);
-      //   }
-      // }}
+        open={isOpen}
+        onOpenChange={(v) => {
+          if (!v) {
+            setIsOpen(v);
+          }
+        }}
       >
         <DialogTrigger onClick={() => setIsOpen(true)} asChild>
           <Button>Upload PDF</Button>
