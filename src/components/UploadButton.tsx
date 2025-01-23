@@ -51,8 +51,7 @@ const UploadDropzone = () => {
             // });
           }
 
-          const [fileResponse] = res;
-
+          const [fileResponse] = res ?? [];
           const key = fileResponse?.key;
 
           if (!key) {
