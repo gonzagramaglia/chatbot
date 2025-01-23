@@ -92,7 +92,7 @@ const UploadDropzone = () => {
                   <p className="text-xs text-zinc-500">PDF (up to 4MB)</p>
                 </div>
 
-                {/* {acceptedFiles && acceptedFiles[0] ? (
+                {acceptedFiles && acceptedFiles[0] ? (
                   <>
                     <div className="max-w-xs bg-white flex items-center rounded-md overflow-hidden outline outline-[1px] outline-zinc-200 divide-x divide-zinc-200">
                       <div className="px-3 py-2 h-full grid place-items-center">
@@ -103,9 +103,9 @@ const UploadDropzone = () => {
                       </div>
                     </div>
                   </>
-                ) : null} */}
+                ) : null}
 
-                {isUploading ? (
+                {/* {isUploading ? (
                   <>
                     <div className="w-full mt-4 max-w-xs mx-auto">
                       <Progress
@@ -114,7 +114,7 @@ const UploadDropzone = () => {
                       />
                     </div>
                   </>
-                ) : null}
+                ) : null} */}
               </label>
             </div>
           </div>
