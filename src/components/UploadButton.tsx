@@ -105,7 +105,7 @@ const UploadDropzone = () => {
                   </>
                 ) : null}
 
-                {/* {isUploading ? (
+                {isUploading && (
                   <>
                     <div className="w-full mt-4 max-w-xs mx-auto">
                       <Progress
@@ -114,7 +114,7 @@ const UploadDropzone = () => {
                       />
                     </div>
                   </>
-                ) : null} */}
+                )}
               </label>
             </div>
           </div>
