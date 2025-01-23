@@ -7,12 +7,12 @@ import Dropzone from "react-dropzone";
 import { Cloud, File } from "lucide-react";
 import { Progress } from "./ui/progress";
 import { useUploadThing } from "@/lib/uploadthing";
-import { useToast } from "@/hooks/use-toast";
+// import { useToast } from "@/hooks/use-toast";
 
 const UploadDropzone = () => {
   const [isUploading, setIsUploading] = useState<boolean>(true);
   const [uploadProgress, setUploadProgress] = useState<number>(0);
-  const { toast } = useToast();
+  // const { toast } = useToast();
 
   const { startUpload } = useUploadThing("pdfUploader");
 
@@ -38,17 +38,17 @@ const UploadDropzone = () => {
         multiple={false}
         onDrop={async (acceptedFile) => {
           setIsUploading(true);
-          const progressInterval = startSimulatedProgress();
+          // const progressInterval = startSimulatedProgress();
 
           // todo: handle file uploading
           const res = await startUpload(acceptedFile);
 
           if (!res) {
-            return toast({
-              title: "Something went wrong",
-              description: "Please try again later",
-              variant: "destructive",
-            });
+            // return toast({
+            //   title: "Something went wrong",
+            //   description: "Please try again later",
+            //   variant: "destructive",
+            // });
           }
 
           const [fileResponse] = res;
@@ -56,16 +56,16 @@ const UploadDropzone = () => {
           const key = fileResponse?.key;
 
           if (!key) {
-            return toast({
-              title: "Something went wrong",
-              description: "Please try again later",
-              variant: "destructive",
-            });
+            // return toast({
+            //   title: "Something went wrong",
+            //   description: "Please try again later",
+            //   variant: "destructive",
+            // });
           }
 
           console.log(key);
 
-          clearInterval(progressInterval);
+          // clearInterval(progressInterval);
           setUploadProgress(100);
         }}
       >
