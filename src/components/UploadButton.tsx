@@ -4,8 +4,8 @@ import { useState } from "react";
 import { Dialog, DialogTrigger, DialogContent } from "./ui/dialog";
 import { Button } from "./ui/button";
 import Dropzone from "react-dropzone";
-// import { Cloud, File } from "lucide-react";
-// import { Progress } from "./ui/progress";
+import { Cloud, File } from "lucide-react";
+import { Progress } from "./ui/progress";
 import { useUploadThing } from "@/lib/uploadthing";
 import { useToast } from "@/hooks/use-toast";
 
@@ -90,7 +90,7 @@ const UploadDropzone = () => {
                     drag and drop
                   </p>
                   <p className="text-xs text-zinc-500">PDF (up to 4MB)</p>
-                </div>
+                </div> */}
 
                 {acceptedFiles && acceptedFiles[0] ? (
                   <>
@@ -114,7 +114,7 @@ const UploadDropzone = () => {
                       />
                     </div>
                   </>
-                ) : null} */}
+                ) : null}
               </label>
             </div>
           </div>
