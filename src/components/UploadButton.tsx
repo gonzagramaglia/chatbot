@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Dialog, DialogTrigger, DialogContent } from "./ui/dialog";
-import { Button } from "./ui/button";
+import { Dialog, DialogContent } from "./ui/dialog"; // DialogTrigger
+// import { Button } from "./ui/button";
 import Dropzone from "react-dropzone";
 import { Cloud, File } from "lucide-react";
 import { Progress } from "./ui/progress";
@@ -134,9 +134,9 @@ const UploadButton = () => {
           }
         }}
       >
-        <DialogTrigger onClick={() => setIsOpen(true)} asChild>
+        {/* <DialogTrigger onClick={() => setIsOpen(true)} asChild>
           <Button>Upload PDF</Button>
-        </DialogTrigger>
+        </DialogTrigger> */}
         <DialogContent>
           <UploadDropzone />
         </DialogContent>
