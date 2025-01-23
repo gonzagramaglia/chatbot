@@ -5,7 +5,6 @@ import { Dialog, DialogTrigger, DialogContent } from "./ui/dialog";
 import { Button } from "./ui/button";
 import Dropzone from "react-dropzone";
 import { Cloud, File } from "lucide-react";
-import ProgressBar from "./ProgressBar";
 import { useUploadThing } from "@/lib/uploadthing";
 import { useToast } from "@/hooks/use-toast";
 
@@ -106,12 +105,7 @@ const UploadDropzone = () => {
                 {isUploading ? (
                   <>
                     <div className="w-full mt-4 max-w-xs mx-auto">
-                      <ProgressBar
-                        progress={uploadProgress}
-                        height="100%"
-                        color="#3b82f6"
-                        backgroundColor="#e4e4e7"
-                      />
+                      /* someday: ProgressBar */
                     </div>
                   </>
                 ) : null}
